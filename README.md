@@ -16,6 +16,7 @@ This project demonstrates:
 
 ---
 ## 📋 TO DO !!!
+- use cloud build yaml for CI/CD, no manaul image creation and management
 - add a test/ folder and make test functions with pytest
 - add the test logic in yaml file for cloud build to test this all
 
