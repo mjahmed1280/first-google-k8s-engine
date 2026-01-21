@@ -15,6 +15,10 @@ This project demonstrates:
 - ✅ Verifying everything works end-to-end
 
 ---
+## 📋 TO DO !!!
+- add a test/ folder and make test functions with pytest
+- add the test logic in yaml file for cloud build to test this all
+
 
 ## 🚀 Step-by-Step Guide
 
