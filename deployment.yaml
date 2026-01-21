@@ -1,0 +1,47 @@
+# The API version for Deployments
+apiVersion: apps/v1
+
+# The type of Kubernetes resource
+kind: Deployment
+
+# Metadata to identify your deployment in the cluster
+metadata:
+  name: flask-backend
+  labels:
+    app: flask-backend
+
+# Specification of how you want your app to run
+spec:
+  # Deployment will maintain 2 Pods for high availability/load balancing
+  replicas: 2
+
+  # The selector tells this Deployment which Pods it "owns"
+  selector:
+    matchLabels:
+      app: flask-backend
+
+  # The template defines the blueprint for the Pods
+  template:
+    metadata:
+      # These labels MUST match the selector above
+      labels:
+        app: flask-backend
+    
+    spec:
+      containers:
+      - name: flask-backend
+        # Your specific image from Google Artifact Registry
+        image: asia-south1-docker.pkg.dev/adh-na-433204/k8-flask-test/test-app:1.0
+        
+        # Pull policy: Always ensures K8s pulls the newest version of the tag
+        imagePullPolicy: Always
+
+        # PORT CONFIGURATION:
+        # Matches Gunicorn: "-b 0.0.0.0:5001"
+        ports:
+        - containerPort: 5001
+        
+        # Environment variables (optional)
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"
