@@ -1,6 +1,8 @@
-# 🐍 Flask App on ☸️ Google Kubernetes Engine (GKE)
+# Flask App on ☸️ Google Kubernetes Engine (GKE)
 
 My first Kubernetes deployment learning project on Google Cloud Platform.
+![alt text](Gemini_Gen_flow.png)
+
 #### Cluster Diagram 
 ![alt text](image.png)
 ---
@@ -207,3 +209,6 @@ Hello from Flask on Kubernetes!
 - **Orchestration**: ☸️ Kubernetes (GKE)
 - **Cloud Provider**: ☁️ Google Cloud Platform (GCP)
 - **Image Registry**: 📦 Google Artifact Registry
+
+### Prompt for flow char gen:
+"A fun, hand-drawn architecture diagram in a Whiteboard Sketch style. Use slightly uneven, doodle-like lines, sticky-note boxes in pastel colors, and casual handwritten text. The layout should be clean but playful, looking like a marker-drawn learning session on a light background. No realistic icons; use simple hand-sketched doodles and organic arrows"
