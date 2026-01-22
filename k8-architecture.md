@@ -10,39 +10,6 @@ Kubernetes is a container orchestration platform that manages containerized appl
 A Kubernetes cluster consists of a **Control Plane** (Master) and multiple **Worker Nodes**.
 #### Cluster Diagram 
 ![alt text](image.png)
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Kubernetes Cluster                        │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  ┌─────────────────────────────────────────────────────────┐ │
-│  │            Control Plane (Master)                        │ │
-│  ├─────────────────────────────────────────────────────────┤ │
-│  │ • API Server                                             │ │
-│  │ • etcd (Data Store)                                     │ │
-│  │ • Scheduler                                             │ │
-│  │ • Controller Manager                                    │ │
-│  │ • Cloud Controller Manager (optional)                  │ │
-│  └─────────────────────────────────────────────────────────┘ │
-│                                                               │
-│  ┌──────────────────┐  ┌──────────────────┐  ┌────────────┐ │
-│  │   Worker Node 1  │  │   Worker Node 2  │  │  Worker... │ │
-│  ├──────────────────┤  ├──────────────────┤  ├────────────┤ │
-│  │ • Kubelet        │  │ • Kubelet        │  │ • Kubelet  │ │
-│  │ • Container      │  │ • Container      │  │ • Container│ │
-│  │   Runtime        │  │   Runtime        │  │   Runtime  │ │
-│  │ • kube-proxy     │  │ • kube-proxy     │  │ • kube-    │ │
-│  │                  │  │                  │  │   proxy    │ │
-│  │ ┌──────────────┐ │  │ ┌──────────────┐ │  │            │ │
-│  │ │   Pods       │ │  │ │   Pods       │ │  │            │ │
-│  │ │ Containers   │ │  │ │ Containers   │ │  │            │ │
-│  │ └──────────────┘ │  │ └──────────────┘ │  │            │ │
-│  └──────────────────┘  └──────────────────┘  └────────────┘ │
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
-```
-
 ---
 
 ## Control Plane Components

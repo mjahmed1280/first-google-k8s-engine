@@ -1,6 +1,9 @@
 # 🐍 Flask App on ☸️ Google Kubernetes Engine (GKE)
 
 My first Kubernetes deployment learning project on Google Cloud Platform.
+#### Cluster Diagram 
+![alt text](image.png)
+---
 
 ---
 
