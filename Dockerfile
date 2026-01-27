@@ -9,8 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # FIX THE SECURITY VULNERABILITY
-# Upgrading pip to 25.3+ handles the CVSS 5.9 warning you received
-# RUN pip install --no-cache-dir --upgrade pip>=25.3
+# added deafault timeout
 RUN pip install --no-cache-dir --default-timeout=100 --upgrade pip>=25.3
 
 # system depend. and pip packages
